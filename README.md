@@ -1,11 +1,10 @@
-# Bring Your Own Data! A Framework for Self-Supervised Evaluation of Large Language Models
+# Bring Your Own Data! Self-Supervised Evaluation for Large Language Models
 
-The official code for Bring Your Own Data! A Framework for Self-Supervised Evaluation of Large Language Models.
+The official code for Bring Your Own Data! Self-Supervised Evaluation for Large Language Models.
 If you have any questions, feel free to email (<njain17@umd.edu>).
 
 
 <img src="images/Teaser.png">
-<!-- ![Overview of the Self-Supervised Evaluation (SSE)](teaser.png) -->
 
 ## About
 To complement conventional evaluation, we propose a framework for _self-supervised model evaluation_. In this framework, metrics are defined as invariances and sensitivities that can be checked in a self-supervised fashion using interventions based only on the model in question rather than external labels. Self-supervised evaluation pipelines are _dataset-agnostic_, and so they can be utilized over larger corpora of evaluation data than conventional metrics, or even directly in production systems to monitor day-to-day performance. In this work, we develop this framework, discuss desiderata for such metrics, and provide a number of case studies for self-supervised metrics: knownledge capability, toxicity detection, long-range (context), word-order, and tokenization sensitivities. By developing these new metrics, we hope to provide a more comprehensive and nuanced understanding of the strengths and limitations of LLMs.
