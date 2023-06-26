@@ -1,6 +1,6 @@
 # Bring Your Own Data! Self-Supervised Evaluation for Large Language Models
 
-The official code for Bring Your Own Data! Self-Supervised Evaluation for Large Language Models.
+The official code for [Bring Your Own Data! Self-Supervised Evaluation for Large Language Models](https://arxiv.org/abs/2306.13651).
 If you have any questions, feel free to email (<njain17@umd.edu>).
 
 
