@@ -55,10 +55,11 @@ def get_model_n_tokenizer(model_name, args=None, trust_remote_code=True, low_cpu
 def llama_loading(model_name, args=None):
     if args.fp16:
         print("Loading FP16 model")
-        model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16, trust_remote_code=True).cuda()
+        model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16,
+                                                     trust_remote_code=True, cache_dir=args.cache_dir_model).cuda()
     else:
-        model = AutoModelForCausalLM.from_pretrained(model_name).cuda()
-    tokenizer = LlamaTokenizer.from_pretrained(model_name, padding_side="left")
+        model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=args.cache_dir_model).cuda()
+    tokenizer = LlamaTokenizer.from_pretrained(model_name, padding_side="left", cache_dir=args.cache_dir_model)
     model.config.pad_token_id = tokenizer.pad_token_id = 0  # unk
     model.config.bos_token_id = 1
     model.config.eos_token_id = 2
